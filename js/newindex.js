@@ -5,7 +5,7 @@ var ctx = canvas.getContext('2d');
 var img = new Image();
 img.crossOrigin="anonymous";
 
-window.addEventListener('load', DrawPlaceholder(img,ctx,"#612E3D",'t1.jpg',430,120));
+window.addEventListener('load', DrawPlaceholder(img,ctx,"#612E3D",'p1.jpg',470,120));
 
 
 var canvas1 = document.getElementById('imageCanvas1');
@@ -13,7 +13,7 @@ var ctx1 = canvas1.getContext('2d');
 var img1 = new Image();
 img1.crossOrigin="anonymous";
 
-window.addEventListener('load', DrawPlaceholder(img1,ctx1,"#612E3D",'t2.jpg',430,120));
+window.addEventListener('load', DrawPlaceholder(img1,ctx1,"#612E3D",'p2.jpg',300,100));
 
 
 var canvas2 = document.getElementById('imageCanvas2');
@@ -21,7 +21,7 @@ var ctx2 = canvas2.getContext('2d');
 var img2 = new Image();
 img2.crossOrigin="anonymous";
 
-window.addEventListener('load', DrawPlaceholder(img2,ctx2,"#612E3D",'t3.jpg',300,70));
+window.addEventListener('load', DrawPlaceholder(img2,ctx2,"#612E3D",'p3.jpg',300,100));
 
 
 var canvas3 = document.getElementById('imageCanvas3');
@@ -29,7 +29,7 @@ var ctx3 = canvas3.getContext('2d');
 var img3 = new Image();
 img3.crossOrigin="anonymous";
 
-    window.addEventListener('load', DrawPlaceholder(img3,ctx3,"#5F5F5F",'t4.jpg',300,70));
+    window.addEventListener('load', DrawPlaceholder(img3,ctx3,"#612E3D",'p4.jpg',300,100));
 
 
 
@@ -38,7 +38,7 @@ var ctx4 = canvas4.getContext('2d');
 var img4 = new Image();
 img4.crossOrigin="anonymous";
 
-window.addEventListener('load', DrawPlaceholder(img4,ctx4,"#5F5F5F",'t5.jpg',300,70));
+window.addEventListener('load', DrawPlaceholder(img4,ctx4,"#612E3D",'p5.jpg',450,120));
 
 
 
@@ -47,7 +47,14 @@ var ctx5 = canvas5.getContext('2d');
 var img5 = new Image();
 img5.crossOrigin="anonymous";
 
-window.addEventListener('load', DrawPlaceholder(img5,ctx5,"#ccc",'t6.jpg',430,120));
+window.addEventListener('load', DrawPlaceholder(img5,ctx5,"#612E3D",'p6.jpg',290,100));
+
+var canvas6 = document.getElementById('imageCanvas6');
+var ctx6 = canvas6.getContext('2d');
+var img6 = new Image();
+img6.crossOrigin="anonymous";
+
+window.addEventListener('load', DrawPlaceholder(img6,ctx6,"#612E3D",'p7.jpg',450,120));
 
 function DrawPlaceholder(photo,canv,clr,sorc,x,y) {
     photo.onload = function() {
@@ -66,7 +73,7 @@ canv.drawImage(photo,0,0);
 function DrawText(canv,fillcolor) {
     canv.fillStyle = fillcolor; 
     canv.textBaseline = 'middle';
-    canv.font = "24px Aref Ruqaa";
+    canv.font = "20px El Messiri";
 }
 function DynamicText(canv,photo,clr,x,y) {
   document.getElementById('name').addEventListener('keyup', function() {
@@ -118,5 +125,9 @@ download_img5 = function(el) {
   el.href = image5;
 };
 
+download_img6 = function(el) {
+  var image6 = canvas6.toDataURL("image/jpg");
+  el.href = image6;
+};
 
 
